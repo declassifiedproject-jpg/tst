@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PT. FRISTINDO JAYA PUMP · Album Tahunan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--font-head:"Playfair Display",Georgia,serif;--font-body:Calibri,Carlito,"Segoe UI",Arial,sans-serif;--blue:#19538f;--red:#d4222d;--silver:#b9bcc2;--paper:#fdfcf9;--ink:#1b2a41;--bg:#0e2440}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:calc(14px + env(safe-area-inset-top,0px)) calc(14px + env(safe-area-inset-right,0px)) calc(14px + env(safe-area-inset-bottom,0px)) calc(14px + env(safe-area-inset-left,0px));background:radial-gradient(circle at 50% 25%,#1f4a7c,var(--bg) 70%);font-family:var(--font-body);color:var(--ink);overflow-x:hidden}
+.stage{perspective:3000px;width:94vw;flex:none;position:relative;aspect-ratio:2/1.4142;transition:height .8s ease}
+.book{position:absolute;top:50%;left:0;width:100%;aspect-ratio:2/1.4142;transform:translateY(-50%);transform-style:preserve-3d;transition:transform .8s ease}
+.sheet{position:absolute;top:0;left:50%;width:50%;height:100%;transform-origin:left center;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.5,.1,.2,1);cursor:pointer}
+.sheet.flipped{transform:rotateY(-180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--paper);overflow:hidden;container-type:inline-size;box-shadow:0 1px 4px rgba(0,0,0,.18);display:flex;flex-direction:column}
+.front{border-radius:0 6px 6px 0}.back{transform:rotateY(180deg);border-radius:6px 0 0 6px}
+.front::after,.back::after{content:"";position:absolute;top:0;bottom:0;width:9%;pointer-events:none}
+.front::after{left:0;background:linear-gradient(90deg,rgba(0,0,0,.07),transparent)}
+.back::after{right:0;background:linear-gradient(270deg,rgba(0,0,0,.07),transparent)}
+.pg{flex:1;min-height:0;display:flex;flex-direction:column;padding:7cqw 7cqw 0}
+.front .pg{padding-left:9cqw}.back .pg{padding-right:9cqw}
+.head{padding-bottom:2cqw;border-bottom:.35cqw solid var(--red);margin-bottom:3cqw;display:flex;align-items:center;justify-content:center;gap:2.4cqw;color:var(--blue)}
+.head img{height:6cqw;width:6cqw;flex:none}
+.head .co{font-size:3cqw;white-space:nowrap}
+.photos{flex:1;min-height:0;display:grid;gap:3.2cqw;padding-bottom:2.4cqw}
+.n1{grid-template-rows:1fr}.n2{grid-template-rows:1fr 1fr}
+.n3{grid-template-columns:1fr 1fr;grid-template-rows:1.25fr 1fr}.n3 figure:first-child{grid-column:span 2}
+.n4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.n5,.n6{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr)}
+.n7,.n8{grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);gap:2.2cqw}
+.n9,.n10,.n11,.n12{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:1.6cqw}
+.n12 .frame{padding:.8cqw}.n12 figcaption{padding-top:.6cqw;font-size:1.9cqw}.n12 figcaption b{font-size:1.7cqw}
+figure{display:flex;flex-direction:column;align-items:center;min-height:0;min-width:0}
+.frame{flex:1;min-height:0;aspect-ratio:1/1;align-self:center;background:#fff;padding:1.1cqw;box-shadow:0 .2cqw .6cqw rgba(20,40,80,.14);border:.15cqw solid #e3e6ea}
+.frame img,.ph{width:100%;height:100%;object-fit:cover;display:block}
+.ph{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M1 1h10l4 4v10H1z' fill='%23eef3fb' stroke='%238fa3bf'/%3E%3Cpath d='M2 14l4-5 3 3 2-2 3 4z' fill='%2360a64a'/%3E%3C/svg%3E") 3px 3px/12% auto no-repeat,#f5f7fa;border:1px solid #c9ced6}
+figcaption{padding-top:1cqw;font-size:2.2cqw;line-height:1.2;text-align:center}
+figcaption b{display:block;font-size:1.95cqw;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:bold;margin:0}
+.foot{display:flex;align-items:center;justify-content:space-between;margin:0 7cqw;padding:2cqw 0 3.4cqw;border-top:.35cqw solid var(--red);font-size:2.4cqw;color:#6b7686;letter-spacing:.08em}
+.front .foot{margin-left:9cqw}.back .foot{margin-right:9cqw}
+.foot .my{font-size:2.8cqw;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);font-weight:600}
+.div{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:10cqw;background:linear-gradient(180deg,#f3f6fa,var(--paper))}
+.div i{display:block;width:14cqw;height:.8cqw;background:var(--red);margin:3cqw auto}
+.div h2{font-size:8cqw;color:var(--blue)}
+.div p{font-size:3cqw;letter-spacing:.3em;text-transform:uppercase;color:#6b7686}
+.controls{flex:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;color:#dfe7f2;font-size:14px}
+button{background:#fff;color:var(--blue);border:0;border-radius:20px;padding:9px 18px;font:inherit;font-weight:bold;cursor:pointer;border-bottom:3px solid var(--red)}
+button:disabled{opacity:.4;cursor:default}
+button{min-height:40px;touch-action:manipulation}
+#info{min-width:110px;text-align:center}
+@media(max-width:600px){.controls{font-size:13px;gap:8px}button{padding:10px 14px}}
+button:focus-visible{outline:3px solid #fff}
+h1,h2,.cover .yr{font-family:var(--font-head)}
+figcaption{font-weight:400}
+/* Font khusus tulisan "PT. FRISTINDO JAYA PUMP" (class .co), file ada di folder yang sama dengan index.html */
+@font-face{font-family:"Handel Gothic";src:url("Handel%20Gothic%20D%20Bold.otf") format("opentype");font-weight:bold;font-style:normal;font-display:swap}
+.co{font-family:"Handel Gothic","Montserrat",Arial,sans-serif;font-weight:bold;letter-spacing:.14em}
+.foot .co{font-size:2.3cqw}
+.cover{flex:1;position:relative;overflow:hidden;color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;padding:10cqw 9cqw 0 13cqw;background:linear-gradient(170deg,#164677,#0e3460 45%,#0a2748)}
+.cover .fj{width:42cqw;height:42cqw;filter:drop-shadow(0 .6cqw 1.2cqw rgba(0,0,0,.25));flex:none}
+.ct{margin-top:7cqw}
+.ct .co{display:block;font-size:5.4cqw;white-space:nowrap}
+.ln{display:block;width:14cqw;height:.8cqw;background:#d4222d;margin:4cqw auto}
+.cover h1{font-family:"Times New Roman",Times,serif;font-size:5.6cqw;font-weight:700;line-height:1.12}
+.cover .yr{font-family:"Times New Roman",Times,serif;font-weight:700;font-size:17cqw;line-height:1;margin-top:6cqw;letter-spacing:.06em;color:#fff}
+.logos{position:absolute;left:0;right:0;bottom:0;height:20cqw;display:flex;align-items:center;justify-content:space-between;padding:0 9cqw 0 13cqw;background:linear-gradient(180deg,#e4e8ed,#c5cbd3);border-top:1cqw solid #d4222d}
+.logos img{width:20cqw;max-height:9cqw;object-fit:contain}
+.logos i{width:.3cqw;height:6cqw;background:#9aa2ad}
+.cover.end{padding:26cqw 13cqw 0 9cqw}
+.cover.end::after{content:"";position:absolute;left:0;right:0;bottom:0;height:9cqw;background:linear-gradient(90deg,#b81b25,#d4222d 50%,#b81b25);border-top:.8cqw solid #cfd2d8}
+.cover.end .fj{width:34cqw;height:34cqw;margin-bottom:10cqw}
+.cover.end h1{font-size:7.4cqw}
+.cover.end .ln{margin:4cqw auto}
+.cover.end .co{font-size:3.4cqw;white-space:nowrap}
+.contact{font-size:2.9cqw;line-height:1.7;color:#d3dcea;margin-top:5cqw}
+
+/* === Slot foto: 2 kolom x 4 baris per halaman (8 kotak), tiap kotak = 1 tanggal berisi N foto berjejer === */
+.pg{padding:5cqw 5cqw 0}.front .pg{padding-left:7cqw}.back .pg{padding-right:7cqw}
+.head{padding-bottom:1.5cqw;margin-bottom:2cqw}
+.head img{height:5.5cqw;width:5.5cqw}
+.photos{padding-bottom:1cqw}
+.n12{gap:.8cqw}
+.n16{grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);gap:1.2cqw 3cqw}
+.pair{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:.8cqw .8cqw;align-content:center;min-height:0;min-width:0}
+.pair figure{justify-content:flex-start}
+.pair figcaption{display:none}
+.pair .frame{flex:none;aspect-ratio:1/1;align-self:center;width:100%;height:auto;padding:.5cqw}
+.pair .frame img,.pair .frame .ph{object-fit:cover}
+.pair .pcap{grid-column:1/-1;text-align:center;font-weight:bold;font-size:3.2cqw;letter-spacing:.1em;text-transform:uppercase;color:var(--red);line-height:1.2}
+.n12 .frame{aspect-ratio:auto;align-self:stretch;width:100%;padding:.5cqw}
+.n12 .frame img{object-fit:contain;background:#fff}
+.n12 figcaption{padding-top:.4cqw;font-size:2cqw}
+.n12 figcaption b{font-size:1.8cqw}
+.foot{margin:0 5cqw;padding:1.4cqw 0 2.4cqw}
+.front .foot{margin-left:7cqw}.back .foot{margin-right:7cqw}
+
+/* video di slot */
+.frame{position:relative}
+.frame video{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;background:#000}
+.frame .vb{position:absolute;left:50%;top:50%;width:32%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-style:normal;font-size:2.6cqw;display:flex;align-items:center;justify-content:center;padding-left:.25em;pointer-events:none;box-shadow:0 0 0 .3cqw rgba(255,255,255,.8)}
+/* === Zoom frame: klik slot -> membesar ke tengah (berisi foto kalau ada, kosong kalau belum) === */
+.frame{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:rgba(5,15,30,0);-webkit-backdrop-filter:blur(0);backdrop-filter:blur(0);visibility:hidden;cursor:zoom-out;transition:background .35s,backdrop-filter .35s,visibility 0s .4s}
+.lb.on{visibility:visible;background:rgba(5,15,30,.92);transition:background .35s}
+.lb .lbf{box-sizing:border-box;background:#fff;padding:10px;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.65),0 0 0 2px rgba(255,255,255,.7);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.lb .lbf img,.lb .lbf .ph{width:100%;height:100%;display:block}
+.lb .lbf img{object-fit:contain}
+.lb .lbf video{width:100%;height:100%;display:block;object-fit:contain;background:#000}
+.lb .cap{color:#fff;font-family:var(--font-head);font-size:clamp(14px,2.4vw,20px);letter-spacing:.06em;opacity:0;transition:opacity .3s;min-height:1.2em}
+.lb.on .cap{opacity:1;transition-delay:.25s}
+.lb .x{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;width:42px;height:42px;padding:0;border-radius:50%;font-size:20px;line-height:1}
+/* === Mode HP: buku 3D tetap ada, tapi ringan === */
+.stage{touch-action:pan-y}
+.book.nofx .sheet{transition:none!important}
+#jump{display:block;flex:0 1 auto;min-height:36px;width:auto;min-width:170px;max-width:240px;font-size:13px!important;cursor:pointer;background:#fff;color:var(--blue);border:0;border-radius:16px;padding:4px 14px;font:inherit;font-size:12px;font-weight:bold;border-bottom:2px solid var(--red);appearance:none;-webkit-appearance:none;text-align:center;text-align-last:center}
+#prev{order:1}#jump{order:2}#next{order:3}#info{order:4;flex:0 0 100%}
+body.mob #jump{display:block;margin:0 auto;align-self:center;text-align:center;text-align-last:center;-webkit-text-align-last:center}
+body.mob .controls{justify-content:center;flex-wrap:wrap}
+body.mob #prev{order:1}body.mob .controls{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;justify-items:center;width:100%}body.mob #prev{justify-self:start}body.mob #next{justify-self:end}body.mob #jump{order:2;width:136px;flex:none;min-width:0;max-width:136px;margin:0;padding:4px 8px;font-size:11px!important;text-overflow:ellipsis}body.mob .controls #info{grid-column:1/-1}body.mob #next{order:3}body.mob .controls #info{order:4;flex:0 0 100%;text-align:center;min-width:0;font-size:12px}body.mob .controls button{padding:9px 9px;font-size:12px;min-height:36px}body.mob .controls{gap:8px}
+body.mob .controls{width:100%;max-width:720px}
+body.mob #info{min-width:0;flex:1;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.mob{overflow-x:hidden;max-width:100vw}
+
+body.mob .cover .fj{filter:none}
+body.mob .lb.on{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(5,15,30,.94)}
+/* iOS Safari: isi halaman tidak boleh tembus ke sisi sebaliknya saat dibalik */
+.face *,.face *::before,.face *::after{-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.face{-webkit-transform:translateZ(0)}
+.back{-webkit-transform:rotateY(180deg) translateZ(0)}
+
+/* penanda post multi-gambar (carousel) */
+.frame .mb{position:absolute;top:4%;right:4%;font-style:normal;font-size:2.6cqw;line-height:1;color:#fff;background:rgba(0,0,0,.6);padding:.5cqw .8cqw;border-radius:.8cqw;pointer-events:none}
+.lb .ar,.lb .dots{display:none}
+.lb.multi .ar{display:flex;position:absolute;top:50%;margin-top:-21px;width:42px;height:42px;padding:0;border-radius:50%;font-size:26px;line-height:1;align-items:center;justify-content:center}
+.lb .ar.l{left:max(10px,env(safe-area-inset-left,0px))}
+.lb .ar.r{right:max(10px,env(safe-area-inset-right,0px))}
+.lb .ar[hidden]{display:none!important}
+.lb.multi .dots{display:flex;gap:7px;min-height:8px}
+.lb .dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.4)}
+.lb .dots i.on{background:#fff}
+</style>
+</head>
+<body>
+<div class="stage"><div class="book" id="book"></div></div>
+<div class="controls">
+  <button id="prev" aria-label="Halaman sebelumnya">← Sebelumnya</button>
+  <span id="info"></span>
+  <button id="next" aria-label="Halaman berikutnya">Berikutnya →</button>
+  <select id="jump" aria-label="Loncat ke bagian"></select>
+</div>
+<script>
+const COMPANY='PT. FRISTINDO JAYA PUMP',YEAR='2026',TITLE='Album Dokumentasi Tahunan';
+const ADDRESS='Alamat perusahaan Anda',PHONE='Telepon: 021-0000-0000',EMAIL='info@perusahaan.com';
+/* Logo ada di folder yang sama dengan index.html (nama file harus persis sama, termasuk huruf besar/kecil) */
+const LOGO=encodeURI('FJ Logo.png');
+const PARTNERS=[
+  {src:encodeURI('Fristam Pumps.png'),alt:'Fristam Pumps'},
+  {src:encodeURI('Fristam Mixing.png'),alt:'Fristam Mixing'},
+  {src:encodeURI('Fluivac.png'),alt:'Fluivac'}
+];
+const BULAN=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+const VID_RE=/\.(mp4|m4v|mov|webm)(\?|#|$)/i;
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const CO=`<span class="co">${esc(COMPANY)}</span>`;
+function fig(p){
+  let img='<div class="ph"></div>';
+  if(p.src){
+    img=VID_RE.test(p.src)
+      ?`<video data-src="${esc(p.src)}#t=0.1" muted playsinline preload="metadata" aria-label="${esc(p.cap||'')}" onerror="this.parentNode.innerHTML='<div class=ph></div>'"></video><i class="vb">&#9654;</i>`
+      :`<img data-src="${esc(p.thumb||p.src)}"${p.thumb?` data-full="${esc(p.src)}"`:''} alt="" decoding="async" onerror="if(this.dataset.full&&this.dataset.src!==this.dataset.full){this.dataset.src=this.dataset.full;this.src=this.dataset.full}else{this.outerHTML='<div class=ph></div>'}">`;
+  }
+  return `<figure><div class="frame"${p.grp?` data-grp="${p.grp.map(esc).join('|')}"`:''}>${img}${p.grp?`<i class="mb">&#10064; ${p.grp.length}</i>`:''}</div><figcaption><b>${esc(String(p.date||'').replace(YEAR,'').trim())||'&#8203;'}</b></figcaption></figure>`;
+}
+function pairs(cells){ /* 1 sel = 1 tanggal, isinya N foto berjejer + 1 label tanggal */
+  return cells.map(c=>{
+    if(c.spacer)return '<div></div>';
+    const n=c.items.length,d=String(c.date||'').replace(YEAR,'').trim();
+    /* 3+ foto: kotak melebar 1 baris penuh (2 kolom), foto berjejer dengan ukuran sama seperti slot biasa */
+    const st=n>=3?`grid-column:1/-1;justify-content:center;grid-template-columns:repeat(${n},minmax(0,20.9cqw))`:`grid-template-columns:repeat(${n},1fr)`;
+    return `<div class="pair" style="${st}">${c.items.map(fig).join('')}<div class="pcap">${esc(d)||'&#8203;'}</div></div>`;
+  }).join('');
+}
+function body(p){return `<div class="pg"><div class="head"><img src="${LOGO}" alt="">${CO}</div><div class="photos n16">${pairs(p.photos)}</div></div>`}
+const cover=`<div class="cover"><img class="fj" src="${LOGO}" alt="Logo"><div class="ct">${CO}<i class="ln"></i><h1>${esc(TITLE)}</h1></div><div class="yr">${esc(YEAR)}</div><div class="logos">${PARTNERS.map(q=>`<img src="${q.src}" alt="${esc(q.alt)}">`).join('<i></i>')}</div></div>`;
+const endc=`<div class="cover end"><img class="fj" src="${LOGO}" alt="Logo"><h1>Terima Kasih</h1><i class="ln"></i>${CO}<div class="contact">${esc(ADDRESS)}<br>${esc(PHONE)}<br>${esc(EMAIL)}</div></div>`;
+const divider=m=>`<div class="div"><img src="${LOGO}" alt="" style="width:14cqw;height:14cqw;margin-bottom:6cqw"><p>Dokumentasi</p><i></i><h2>${esc(m)}</h2><p style="margin-top:3cqw">${esc(YEAR)}</p></div>`;
+const secDivider=(m,t)=>`<div class="div"><img src="${LOGO}" alt="" style="width:14cqw;height:14cqw;margin-bottom:6cqw"><p>${esc(m)} ${esc(YEAR)}</p><i></i><h2>${esc(t)}</h2><p style="margin-top:3cqw">Dokumentasi</p></div>`;
+const faceInner=(o,i)=>o.html+(o.bare?'':`<div class="foot"><span>${i}</span><span class="my">${o.month?esc(o.month)+' '+esc(YEAR)+(o.sec?' \u00b7 '+esc(o.sec):''):''}</span></div>`);
+const face=(o,i,side)=>`<div class="face ${side}">${faceInner(o,i)}</div>`;
+const stage=document.querySelector('.stage'),book=document.getElementById('book');
+let N=0,page=0,half=0,els=[],hasPhotos=false;
+let ALL=[];
+const isMob=()=>innerWidth<700||(innerHeight<520&&matchMedia('(pointer:coarse)').matches);
+function build(pgs){
+  const all=[{html:cover,bare:1}];
+  let lastM='',lastS='';
+  pgs.forEach(p=>{
+    if(p.month!==lastM){all.push({html:divider(p.month),bare:1,md:p.month});lastM=p.month;lastS=''}
+    if(p.sec!==lastS){all.push({html:secDivider(p.month,p.sec),bare:1,sd:[p.month,p.sec]});lastS=p.sec}   /* tiap bagian (Poster, Kegiatan) dibuka dengan halaman pembatas */
+    all.push({html:body(p),month:p.month,sec:p.sec});
+  });
+  if(all.length%2===0)all.push({html:'<div class="pg"></div>'});
+  all.push({html:endc,bare:1});
+  ALL=all;
+  buildJump();
+  mount();
+}
+function mount(){
+  document.body.classList.toggle('mob',isMob());
+  book.innerHTML='';els=[];page=0;half=0;
+  N=ALL.length/2;
+  for(let i=0;i<N;i++){
+    const s=document.createElement('div');s.className='sheet';
+    s.innerHTML='<div class="face front"></div><div class="face back"></div>';   /* kosong dulu, diisi saat halamannya sudah dekat */
+    s.addEventListener('click',()=>{if(single())return;i===page?nextP():i===page-1&&prevP()});
+    book.appendChild(s);els.push(s);
+  }
+  nearby();z();render();
+}
+/* Supaya ringan di HP: hanya lembar di sekitar halaman aktif yang dibuat, dan foto/video hanya dimuat untuk halaman yang akan terlihat */
+function setActive(f,on){
+  f.querySelectorAll('img[data-src],video[data-src]').forEach(m=>{
+    if(on){if(!m.getAttribute('src'))m.setAttribute('src',m.dataset.src)}
+    else if(m.getAttribute('src')){m.removeAttribute('src');if(m.tagName==='VIDEO')m.load()}
+  });
+}
+function nearby(quick){   /* quick=true: saat animasi balik halaman, hanya bangun halaman (ringan) + muat gambar spread yang terlihat; sisanya menyusul */
+  const m=isMob(),lo=m?2*page-1:2*page-3,hi=m?2*page+2:2*page+4;
+  els.forEach((s,i)=>{
+    if(i<page-2||i>page+2){if(s._f){s.firstChild.innerHTML=s.lastChild.innerHTML='';s._f=0}s.style.display='none';return}
+    s.style.display='';
+    if(!s._f){s.firstChild.innerHTML=faceInner(ALL[2*i],2*i);s.lastChild.innerHTML=faceInner(ALL[2*i+1],2*i+1);s._f=1}
+    if(quick){
+      if(2*i>=2*page-1&&2*i<=2*page)setActive(s.firstChild,true);
+      if(2*i+1>=2*page-1&&2*i+1<=2*page)setActive(s.lastChild,true);
+    }else{
+      setActive(s.firstChild,2*i>=lo&&2*i<=hi);
+      setActive(s.lastChild,2*i+1>=lo&&2*i+1<=hi);
+    }
+  });
+}
+/* menu loncat ke bagian (hanya tampil di HP) */
+function buildJump(){
+  const o=[['Sampul',0]];let lm=0;
+  ALL.forEach((x,i)=>{if(x.md)lm=i;if(x.sd)o.push([x.sd[0]+' · '+x.sd[1],x.sd[1]==='Poster'?lm:i])});
+  o.push(['Sampul belakang',ALL.length-1]);
+  jump.innerHTML=o.map(([t,v])=>`<option value="${v}">${esc(t)}</option>`).join('');
+}
+function syncJump(){const c=page===0?0:page>=N?ALL.length-1:2*page;let v=0;[...jump.options].forEach(o=>{if(+o.value<=c)v=o.value});jump.value=v}
+function gotoIdx(idx){
+  const t=Math.max(0,Math.min(N,Math.ceil(idx/2)));
+  if(t===page)return;
+  if(isMob())book.classList.add('nofx');   /* lompat jauh tanpa animasi balik halaman supaya tidak berat */
+  page=t;half=0;nearby();z();render();
+  requestAnimationFrame(()=>requestAnimationFrame(()=>book.classList.remove('nofx')));
+}
+const PHOTO_DIR='foto';
+const IMG_RE=/\.(jpe?g|png|webp|gif|avif|bmp|mp4|m4v|mov|webm)$/i; /* gambar + video */
+const nat=(a,b)=>a.localeCompare(b,undefined,{numeric:true});
+/* Baca tanggal dari nama file, teks lain di nama file diabaikan.
+   Format utama: HARI.BULAN.TAHUN, contoh "Fristam Visit Post - 06.07.2026.png" = 6 Juli 2026
+   (pemisah boleh . - _ atau spasi). Cadangan: TAHUNBULANHARI, contoh 2026-07-06 / IMG_20260706 */
+function parseDate(name){
+  const base=name.replace(IMG_RE,'');
+  let m=base.match(/(?<!\d)(0?[1-9]|[12]\d|3[01])[.\-_ ](0?[1-9]|1[0-2])[.\-_ ]((?:19|20)\d{2})(?!\d)/);
+  if(m)return {d:+m[1],m:+m[2],y:+m[3]};
+  m=base.match(/(?<!\d)((?:19|20)\d{2})[.\-_]?(0[1-9]|1[0-2])[.\-_]?(0[1-9]|[12]\d|3[01])(?!\d)/);
+  if(m)return {d:+m[3],m:+m[2],y:+m[1]};
+  return null;
+}
+const dkey=n=>{const t=parseDate(n);return t?t.y*10000+t.m*100+t.d:Infinity};
+/* Jika situs memakai domain sendiri (bukan xxx.github.io), isi manual: const GH={owner:'namaakun',repo:'namarepo'} */
+const GH={owner:'',repo:''};
+const MONTH_EN=['january','february','march','april','may','june','july','august','september','october','november','december'];
+const monthIdx=n=>{n=n.toLowerCase().replace('febuari','februari');let i=BULAN.findIndex(m=>n.includes(m.toLowerCase()));return i>=0?i:MONTH_EN.findIndex(m=>n.includes(m))}; /* ejaan "Febuari" juga dikenali */
+let note='';
+async function ghJson(u){
+  const r=await fetch(u);
+  if(!r.ok)throw new Error(r.status===403?'batas API GitHub tercapai, coba lagi nanti':r.status===404?'repository tidak ditemukan (cek GH owner/repo)':'GitHub API error '+r.status);
+  return r.json();
+}
+async function getManifest(){
+  try{const r=await fetch(PHOTO_DIR+'/manifest.json',{cache:'no-cache'});if(r.ok)return {base:PHOTO_DIR,dirs:await r.json()}}catch(e){}
+  let owner=GH.owner,repo=GH.repo;
+  if(!owner){
+    const host=location.hostname;
+    if(!host.endsWith('.github.io')){note='alamat ini bukan github.io, isi GH di kode';return null}
+    owner=host.split('.')[0];
+    const seg=location.pathname.split('/').filter(Boolean)[0];
+    repo=seg&&!/\.html?$/i.test(seg)?seg:host;
+  }
+  try{
+    /* 1 panggilan saja: ambil seluruh daftar file repository (termasuk subfolder seperti Januari/Kegiatan) */
+    const tree=await ghJson(`https://api.github.com/repos/${owner}/${repo}/git/trees/HEAD?recursive=1`);
+    const PD=['foto','fotos','photo','photos'];
+    const found={};   /* folder induk -> {folder bulan: [path file di dalamnya]} */
+    (tree.tree||[]).forEach(x=>{
+      if(x.type!=='blob'||!IMG_RE.test(x.path))return;
+      const seg=x.path.split('/');
+      let b=0,base='';
+      if(PD.includes(seg[0].toLowerCase())){base=seg[0];b=1}
+      if(seg.length<b+2||monthIdx(seg[b])<0)return;
+      const f=(found[base]=found[base]||{});
+      (f[seg[b]]=f[seg[b]]||[]).push(seg.slice(b+1).join('/'));
+    });
+    const bases=Object.keys(found);
+    if(!bases.length){note='belum ada gambar/video di folder bulan (contoh: Januari/Post - 05.01.2026.png)';return null}
+    const base=bases.find(k=>k!=='');
+    return base!==undefined?{base,dirs:found[base]}:{base:'',dirs:found['']};
+  }catch(e){note=e.message||'gagal membaca GitHub';return null}
+}
+/* Susun semua halaman: 12 bulan, tiap bulan terdiri dari 2 bagian: POSTER lalu KEGIATAN.
+   Tiap bagian punya 1 kotak untuk SETIAP tanggal (1..akhir bulan); jumlah foto di kotak itu mengikuti jumlah file pada tanggal tersebut (minimal 2 slot).
+   File masuk ke KEGIATAN jika ada di subfolder "Kegiatan" (mis. Januari/Kegiatan/...) atau nama filenya mengandung kata "Kegiatan";
+   selain itu masuk ke POSTER. Foto yang tanggalnya cocok (dari nama file) masuk ke kotak tanggal itu; tanggal tanpa foto tetap kotak kosong. */
+const DIM=m=>new Date(+YEAR,m+1,0).getDate();
+const isKeg=f=>/kegiatan/i.test(f.name);
+/* Januari: tanggal 1 & 2 dan semua Sabtu/Minggu tidak punya slot foto */
+const SKIP_DATES={0:[1,2],1:[17],3:[3]};   /* Februari: tanggal 17 dilewati (bagian Poster); April: tanggal 3 juga dilewati */
+const WEEKEND_ALL_MONTHS=[0,3];   /* bulan yang Sabtu/Minggunya dilewati di semua bagian: 0 = Januari, 3 = April */
+/* Bagian POSTER: Sabtu & Minggu dilewati di SEMUA bulan (Januari s/d Desember) */
+const RANGE_POSTER_MONTHS=[1,2];   /* bulan yang tanggal 18-27 juga dilewati di bagian Poster: 1 = Februari, 2 = Maret */
+const SKIP_RANGE=[18,27];   /* tanggal 18 s/d 27 dilewati di bulan-bulan di atas (bagian Poster) */
+const isWeekend=(mi,d)=>{const w=new Date(+YEAR,mi,d).getDay();return w===0||w===6};
+const skipDay=(mi,d,sec)=>{
+  const we=isWeekend(mi,d);
+  if(WEEKEND_ALL_MONTHS.includes(mi))return (SKIP_DATES[mi]||[]).includes(d)||we;
+  if(sec==='Poster'){
+    if(we)return true;   /* Poster: Sabtu & Minggu tidak diberi kotak di semua bulan */
+    if(RANGE_POSTER_MONTHS.includes(mi)&&d>=SKIP_RANGE[0]&&d<=SKIP_RANGE[1])return true;
+    return (SKIP_DATES[mi]||[]).includes(d);
+  }
+  return false;
+};
+/* Jumlah slot minimum per tanggal. Format 'bulan-tanggal':jumlah. Default semua tanggal = 2 slot.
+   Contoh: 13 Februari = 3 slot. Tambah tanggal lain di sini, misal '3-5':3 untuk 5 Maret. */
+const MIN_SLOTS={};
+const GROUP_RE=/fluivac/i;   /* file bertanggal sama yang namanya cocok digabung jadi 1 slot carousel */
+function slotsFor(files,mi,sec){
+  const byDay={},extra=[],cells=[];
+  const empty=d=>({src:'',date:d,cap:''});
+  /* urutan dalam 1 tanggal (bagian Poster): file Fristam dulu, lalu lainnya, lalu Fluivac */
+  const rank=f=>sec!=='Poster'?0:/fluivac/i.test(f.name)?2:/fristam/i.test(f.name)?0:1;
+  files.slice().sort((a,b)=>dkey(a.name)-dkey(b.name)||rank(a)-rank(b)||nat(a.name,b.name)).forEach(f=>{
+    const t=parseDate(f.name);
+    if(t&&t.m===mi+1&&t.y===+YEAR)(byDay[t.d]=byDay[t.d]||[]).push(f);else extra.push(f);
+  });
+  for(let d=1;d<=DIM(mi);d++){
+    const label=d+' '+BULAN[mi]+' '+YEAR;
+    const arr=byDay[d]||[];
+    if(sec==='Poster'&&isWeekend(mi,d))continue;   /* Poster: Sabtu & Minggu SELALU dilewati, walaupun ada file bertanggal itu */
+    if(!arr.length&&skipDay(mi,d,sec))continue;   /* tanggal lain yang dilewati tidak diberi kotak (kecuali ada file untuk tanggal itu) */
+    const gr=arr.filter(f=>GROUP_RE.test(f.name));
+    const items=[];let first=true;
+    arr.forEach(f=>{
+      if(gr.length>1&&GROUP_RE.test(f.name)){
+        if(!first)return;first=false;
+        items.push({src:gr[0].src,thumb:gr[0].thumb,date:label,cap:gr[0].name,grp:gr.map(g=>g.src)});
+      }else items.push({src:f.src,thumb:f.thumb,date:label,cap:f.name});
+    });
+    const min=MIN_SLOTS[(mi+1)+'-'+d]||2;
+    while(items.length<min)items.push(empty(label));   /* minimal slot per tanggal (default 2), tidak dibulatkan ke genap */
+    cells.push({date:label,items});
+  }
+  /* file tanpa tanggal cocok: dikelompokkan per label tanggalnya */
+  const ex={};
+  extra.forEach(f=>{
+    const t=parseDate(f.name);
+    const label=t?t.d+' '+BULAN[t.m-1]+' '+t.y:BULAN[mi]+' '+YEAR;
+    (ex[label]=ex[label]||[]).push({src:f.src,thumb:f.thumb,date:label,cap:f.name});
+  });
+  Object.keys(ex).forEach(l=>{const it=ex[l];while(it.length<2)it.push(empty(l));cells.push({date:l,items:it})});
+  return cells;
+}
+function makePages(byMonth){
+  const pgs=[];
+  for(let mi=0;mi<12;mi++){
+    const all=byMonth[mi]||[];
+    [['Poster',all.filter(f=>!isKeg(f))],['Kegiatan',all.filter(isKeg)]].forEach(([sec,files])=>{
+      const cells=slotsFor(files,mi,sec);
+      /* 1 halaman = 8 unit (2 kolom x 4 baris). Tanggal 3+ foto memakai 2 unit (1 baris penuh) dan harus mulai di kolom kiri */
+      let cur=[],u=0;
+      const flush=()=>{if(cur.length)pgs.push({month:BULAN[mi],sec,photos:cur});cur=[];u=0};
+      cells.forEach(c=>{
+        const w=c.items.length>=3?2:1;
+        if(w===2&&u%2===1){cur.push({spacer:1});u++}
+        if(u+w>8)flush();
+        cur.push(c);u+=w;
+      });
+      flush();
+    });
+  }
+  return pgs;
+}
+async function loadPhotos(){
+  const man=await getManifest();
+  if(!man){render();return}
+  const byMonth={};
+  Object.keys(man.dirs).forEach(dirName=>{
+    const mi=monthIdx(dirName);if(mi<0)return;
+    (byMonth[mi]=byMonth[mi]||[]).push(...man.dirs[dirName].filter(n=>IMG_RE.test(n)).map(name=>{const full=(man.base?man.base+'/':'')+dirName+'/'+name;return {name,src:encodeURI(full),thumb:VID_RE.test(name)?'':encodeURI('thumbs/'+full.replace(/\.[^.\/]+$/,'.jpg'))}}));
+  });
+  hasPhotos=true;
+  build(makePages(byMonth));
+}
+const z=()=>els.forEach((s,i)=>s.style.zIndex=i<page?i+1:N-i);
+const single=()=>false;   /* HP juga memakai buku utuh, bukan setengah halaman */
+function render(){
+  els.forEach((s,i)=>s.classList.toggle('flipped',i<page));
+  const cs=getComputedStyle(document.body);
+  const padX=parseFloat(cs.paddingLeft)+parseFloat(cs.paddingRight);
+  const padY=parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom);
+  const availW=Math.min(innerWidth-padX,1600);
+  const availH=innerHeight-padY-controls.offsetHeight-16;
+  const sg=single(),R=1.4142/2;
+  /* Lebar buku disesuaikan agar muat di lebar DAN tinggi layar */
+  const W=sg?availW:Math.max(240,Math.min(availW,availH/R));
+  const H=W*R;
+  let k=1,tx=0;
+  const zoom=Math.max(1,Math.min(2,availH/H));
+  if(page===0||page===N){k=zoom;tx=(page===0?-25:25)*k}
+  else if(sg){k=zoom;tx=(half?-25:25)*k}
+  stage.style.width=W+'px';
+  stage.style.height=H*k+'px';
+  book.style.transform=`translate(${tx}%,-50%) scale(${k})`;
+  prev.disabled=page===0&&!half;next.disabled=page===N;
+  info.textContent=(page===0?'Sampul':page===N?'Sampul belakang':sg?`Hal. ${2*page-1+half}`:`Hal. ${2*page-1} – ${2*page}`)+(hasPhotos?'':' · foto belum terdeteksi'+(note?': '+note:''));
+  syncJump();
+}
+function step(to){els[to>page?page:to].style.zIndex=100;page=to;nearby(true);render();clearTimeout(step.t);step.t=setTimeout(z,900);clearTimeout(step.n);step.n=setTimeout(()=>nearby(),950)}   /* animasi jalan dulu, baru muat gambar halaman berikutnya */
+function nextP(){if(single()&&page>0&&page<N&&half===0){half=1;render();return}if(page<N){half=0;step(page+1)}}
+function prevP(){if(single()&&page>0&&page<N&&half===1){half=0;render();return}if(page>0){half=1;step(page-1)}}
+const jump=document.getElementById('jump');
+const controls=document.querySelector('.controls'),prev=document.getElementById('prev'),next=document.getElementById('next'),info=document.getElementById('info');
+next.onclick=nextP;prev.onclick=prevP;
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')nextP();if(e.key==='ArrowLeft')prevP()});
+let sx=null;
+book.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+book.addEventListener('touchend',e=>{if(sx===null)return;const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)d<0?nextP():prevP();sx=null});
+jump.onchange=()=>gotoIdx(+jump.value);
+addEventListener('resize',()=>{document.body.classList.toggle('mob',isMob());render()});
+
+/* === Zoom frame: klik slot -> membesar ke tengah ala inspect item === */
+const lb=document.createElement('div');
+lb.className='lb';
+lb.innerHTML='<button class="x" aria-label="Tutup">\u2715</button><button class="ar l" aria-label="Sebelumnya">\u2039</button><button class="ar r" aria-label="Berikutnya">\u203A</button><div class="lbf"><img alt=""><video controls playsinline></video><div class="ph"></div></div><div class="cap"></div><div class="dots"></div>';
+document.body.appendChild(lb);
+const lbf=lb.querySelector('.lbf'),lbImg=lbf.querySelector('img'),lbPh=lbf.querySelector('.ph'),lbVid=lbf.querySelector('video'),lbCap=lb.querySelector('.cap');
+let lbThumb=null;
+let grp=null,gi=0;   /* carousel: daftar poster dalam 1 post + indeks aktif */
+function fly(from){ // animasi dari posisi slot ke tengah (dan sebaliknya)
+  const f=lbf.getBoundingClientRect();
+  const dx=(from.left+from.width/2)-(f.left+f.width/2);
+  const dy=(from.top+from.height/2)-(f.top+f.height/2);
+  const s=Math.min(from.width/f.width,from.height/f.height);
+  return `translate(${dx}px,${dy}px) scale(${s})`;
+}
+function openLb(frame){
+  lbThumb=frame;
+  grp=frame.dataset.grp?frame.dataset.grp.split('|'):null;gi=0;
+  lb.classList.toggle('multi',!!grp);
+  if(grp){grp.forEach(u=>{new Image().src=u});updG()}
+  const r=frame.getBoundingClientRect();
+  const im=frame.querySelector('img'),vd=frame.querySelector('video');
+  const fg=frame.closest('figure'),fc=fg&&fg.querySelector('figcaption');
+  lbCap.textContent=fc?fc.textContent.replace(/\u200b/g,'').trim():'';
+  const go=()=>{
+    let ratio=r.width/r.height;
+    if(im&&im.naturalWidth)ratio=im.naturalWidth/im.naturalHeight;
+    if(vd&&vd.videoWidth)ratio=vd.videoWidth/vd.videoHeight;
+    const w=Math.min(innerWidth*.92,innerHeight*.74*ratio),h=w/ratio;
+    lbf.style.width=w+'px';lbf.style.height=h+'px';
+    lbf.style.transition='none';
+    lbf.style.transform='none';
+    lbf.style.transform=fly(r);
+    lbf.getBoundingClientRect();           // paksa reflow
+    lb.classList.add('on');
+    lbf.style.transition='';
+    lbf.style.transform='none';
+    if(vd){const pl=lbVid.play();if(pl&&pl.catch)pl.catch(()=>{});}   // video langsung diputar
+  };
+  lbVid.pause();
+  lbImg.style.display='none';lbPh.style.display='none';lbVid.style.display='none';
+  if(im){
+    lbImg.style.display='block';
+    lbImg.src=im.currentSrc||im.src;
+    lbImg.decode?lbImg.decode().then(go,go):go();
+    const full=im.dataset.full;   /* thumbnail tampil dulu, lalu diganti file asli (tidak dikompres) */
+    if(full){const up=new Image();up.onload=()=>{if(lbThumb===frame&&(!grp||gi===0))lbImg.src=full};up.src=full}
+  }else if(vd){
+    lbVid.style.display='block';
+    lbVid.src=(vd.currentSrc||vd.src).split('#')[0];
+    go();
+  }else{
+    lbPh.style.display='block';lbImg.removeAttribute('src');
+    go();
+  }
+}
+function closeLb(){
+  if(!lb.classList.contains('on'))return;
+  lbVid.pause();
+  lb.classList.remove('on');
+  if(lbThumb&&document.contains(lbThumb))lbf.style.transform=fly(lbThumb.getBoundingClientRect());
+}
+lbVid.addEventListener('click',e=>e.stopPropagation());   // klik kontrol video tidak menutup zoom
+lb.addEventListener('click',closeLb);
+
+/* carousel: geser antar poster dalam 1 post (seperti post multi-gambar di IG) */
+const arL=lb.querySelector('.ar.l'),arR=lb.querySelector('.ar.r'),dots=lb.querySelector('.dots');
+function updG(){
+  arL.hidden=gi===0;arR.hidden=gi===grp.length-1;
+  dots.innerHTML=grp.map((_,i)=>`<i class="${i===gi?'on':''}"></i>`).join('');
+}
+function showG(i){
+  if(!grp)return;
+  i=Math.max(0,Math.min(grp.length-1,i));
+  if(i===gi)return;
+  gi=i;updG();
+  const t=new Image();
+  t.onload=()=>{
+    const r=t.naturalWidth/t.naturalHeight,w=Math.min(innerWidth*.92,innerHeight*.74*r);
+    lbf.style.width=w+'px';lbf.style.height=w/r+'px';lbImg.src=grp[gi];
+  };
+  t.src=grp[gi];
+}
+arL.addEventListener('click',e=>{e.stopPropagation();showG(gi-1)});
+arR.addEventListener('click',e=>{e.stopPropagation();showG(gi+1)});
+let lsx=null;
+lbf.addEventListener('touchstart',e=>lsx=e.touches[0].clientX,{passive:true});
+lbf.addEventListener('touchend',e=>{
+  if(lsx===null||!grp)return;
+  const d=e.changedTouches[0].clientX-lsx;lsx=null;
+  if(Math.abs(d)>40){showG(gi+(d<0?1:-1))}
+});
+
+/* klik slot di album (berisi foto atau masih kosong) -> buka zoom, tidak ikut membalik halaman */
+const frameClick=e=>{const fr=e.target.closest('.frame');if(!fr)return;e.stopPropagation();openLb(fr)};
+book.addEventListener('click',frameClick,true);
+/* Esc menutup; panah tidak membalik halaman saat zoom terbuka (dan dipakai untuk geser carousel) */
+window.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('on'))return;
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.stopPropagation();if(e.key==='ArrowLeft')showG(gi-1);else showG(gi+1)}
+},true);
+
+build(makePages({}));loadPhotos();
+</script>
+</body>
+</html>
